@@ -15,7 +15,7 @@ class PlanetResponse {
   final String name;
 
   @JsonKey(name: 'rotation_period')
-  final int rotationPeriod;
+  final String rotationPeriod;
 
   Map<String, dynamic> toJson() => _$PlanetResponseToJson(this);
 }

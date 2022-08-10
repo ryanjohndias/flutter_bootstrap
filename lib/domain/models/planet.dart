@@ -5,5 +5,5 @@ class Planet {
   });
 
   final String name;
-  final int rotationPeriod;
+  final String rotationPeriod;
 }

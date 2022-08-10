@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
 import '../data/api/swapi_api.dart';
+import '../data/repositories/example_repository.dart';
 import 'app_constants.dart';
 
 class Dependencies extends StatelessWidget {
@@ -20,6 +21,9 @@ class Dependencies extends StatelessWidget {
         }),
         Provider<SwapiApi>(create: (BuildContext context) {
           return SwapiApi(context.read(), baseUrl: AppConstants.baseUrl);
+        }),
+        Provider<ExampleRepository>(create: (BuildContext context) {
+          return ExampleRepository(swapiApi: context.read());
         }),
       ],
       child: child,
